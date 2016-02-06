@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Usage: git delb {branch1} {branch2} ...
+
+git checkout master
+
+for branch in "$@"
+do
+	BRANCH_REF=`git show-ref refs/heads/${branch}`
+
+	if [[ ! -n $BRANCH_REF || $branch == 'master' || $branch == 'develop' ]] then
+		echo "Fatal: Command ignored! No branch named '${branch}'."
+		continue
+	else
+		git branch -D $branch
+		git push origin :$branch
+	fi
+done

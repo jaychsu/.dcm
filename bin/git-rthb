@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Usage: git rthb {base branch} {branch1} {branch2} ...
+
+BASE_BRANCH=$1
+# Ignore first parameter in `$@`
+shift
+
+for branch in "$@"
+do
+	BRANCH_REF=`git show-ref refs/heads/${branch}`
+
+	if [[ ! -n $BRANCH_REF ]] then
+		echo "Fatal: Command ignored! No branch named '${branch}'."
+		continue
+	else
+		git checkout $branch
+		git reset --hard $BASE_BRANCH
+	fi
+done
+
+git checkout $BASE_BRANCH
