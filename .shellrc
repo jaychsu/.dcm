@@ -1,0 +1,58 @@
+if [[ $OSTYPE == darwin* ]]; then
+    alias gvim='open -a MacVim'
+    alias ls='ls -GFh'
+    alias o='open'
+else
+    alias ls='ls --color -hF --show-control-chars'
+    alias o='gnome-open'
+    alias open='gnome-open'
+fi
+
+# Temp: Connect Server
+alias gosvr='ssh sujunhong@192.168.2.2'
+alias gonas='ssh admin@192.168.1.3'
+
+# Shell
+alias grep='grep --color'
+alias la='ls -a'
+alias ll='ls -l'
+alias rm='rm -v'
+alias sudo='sudo -E'
+alias vi='vim --noplugin'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~='cd ~ && cd'
+
+# Application used by HomeBrew
+alias g='git'
+alias stpg='postgres -D /usr/local/var/postgres'
+alias qtpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+
+# Application used by Node
+alias nd='node'
+alias n='npm'
+alias nr='npm run'
+
+alias gp='gulp'
+alias gt='grunt'
+alias ins='bower install && npm install'
+alias cins='bower install && cnpm install'
+alias wp='webpack'
+alias wps='webpack-dev-server'
+alias less='less -r'
+alias sscli='http_proxy on && DEBUG=proxy kneesocks 10001 1080'
+alias cscli='http_proxy off'
+
+# Application used by Ruby
+alias be='bundle exec'
+alias r='rails'
+alias rgc='rvm gemset create'
+alias rgl='rvm gemset list'
+alias rgu='rvm gemset use'
+
+# Application used by Python
+alias stsvr='python -m SimpleHTTPServer'
