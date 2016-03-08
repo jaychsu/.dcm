@@ -1,5 +1,4 @@
 if [[ $OSTYPE == darwin* ]]; then
-    alias gvim='open -a MacVim'
     alias ls='ls -GFh'
     alias o='open'
 else
@@ -57,10 +56,9 @@ alias rgu='rvm gemset use'
 # Application used by Python
 alias stsvr='python -m SimpleHTTPServer'
 
-
 # Global Variables
 export PATH="$HOME/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin"
-
+export EDITOR='vim'
 
 # Custom Command
 http_proxy() {
