@@ -2,8 +2,8 @@
 
 # Usage: git rthb {base branch} {branch1} {branch2} ...
 
+# Save {base branch}`$1` as `BASE_BRANCH` and Remove it in `$@`
 BASE_BRANCH=$1
-# Ignore first parameter in `$@`
 shift
 
 for branch in "$@"
