@@ -8,7 +8,6 @@ else
 fi
 
 # Temp: Connect Server
-alias gosvr='ssh sujunhong@192.168.2.2'
 alias gonas='ssh admin@192.168.1.3'
 
 # Shell
@@ -26,34 +25,31 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~ && cd'
 
-# Application used by HomeBrew
+# Application installed by HomeBrew
 alias g='git'
 alias stpg='postgres -D /usr/local/var/postgres'
 alias qtpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 
-# Application used by Node
+# Application installed by Node
 alias nd='node'
 alias n='npm'
 alias nr='npm run'
 
 alias gp='gulp'
-alias gt='grunt'
-alias ins='bower install && npm install'
-alias cins='bower install && cnpm install'
 alias wp='webpack'
 alias wps='webpack-dev-server'
 alias less='less -r'
 alias sscli='http_proxy on && DEBUG=proxy kneesocks 10001 1080'
 alias cscli='http_proxy off'
 
-# Application used by Ruby
+# Application installed by Ruby
 alias be='bundle exec'
 alias r='rails'
 alias rgc='rvm gemset create'
 alias rgl='rvm gemset list'
 alias rgu='rvm gemset use'
 
-# Application used by Python
+# Application installed by Python
 alias stsvr='python -m SimpleHTTPServer'
 
 # Global Variables
