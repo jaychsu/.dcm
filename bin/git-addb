@@ -1,16 +1,21 @@
 #!/bin/zsh
 
-# Usage: git addb {branch1} {branch2} ...
+if [[ -z $1 ]] then
+  echo 'Usage: git addb [<branch>...]'
+  exit 1
+fi
 
 for branch in "$@"
 do
-	BRANCH_REF=`git show-ref refs/heads/${branch}`
+  BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-	if [[ -n $BRANCH_REF ]] then
-		echo "Fatal: Command ignored! A branch named '${branch}' already exists."
-		continue
-	else
-		git checkout -b $branch
-		git push -u origin $branch
-	fi
+  if [[ -n $BRANCH_REF ]] then
+    echo "Fatal: Command ignored! A branch named '${branch}' already exists."
+    continue
+  fi
+
+  git checkout -b $branch
+  git push -u origin $branch
+  echo "Created branch: ${branch}."
+
 done

@@ -1,18 +1,26 @@
 #!/bin/zsh
 
-# Usage: git delb {branch1} {branch2} ...
+if [[ -z $1 ]] then
+  echo 'Usage: git delb [<branch>...]'
+  exit 1
+fi
 
 git checkout master
 
 for branch in "$@"
 do
-	BRANCH_REF=`git show-ref refs/heads/${branch}`
+  BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-	if [[ ! -n $BRANCH_REF || $branch == 'master' || $branch == 'develop' ]] then
-		echo "Fatal: Command ignored! No branch named '${branch}'."
-		continue
-	else
-		git branch -D $branch
-		git push origin :$branch
-	fi
+  if [[ ! -n $BRANCH_REF ]] then
+    echo "Fatal: Command ignored! No branch named '${branch}'."
+    continue
+  elif [[ $branch == 'master' || $branch == 'develop' ]] then
+    echo "Fatal: Command looks bad. Please delete '${branch}' manually."
+    continue
+  fi
+
+  git branch -D $branch
+  git push origin :$branch
+  echo "Removed branch: ${branch}."
+
 done

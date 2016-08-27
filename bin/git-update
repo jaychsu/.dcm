@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+if [[ -z $1 ]] then
+  echo 'Usage: git update [<branch>...]'
+  exit 1
+fi
+
+for remote in origin upstream "$@"
+do
+  REMOTE_REF=`git remote | grep ${remote}`
+
+  if [[ ! -n $REMOTE_REF ]] then
+    [[ $remote != 'upstream' ]] && echo "Fatal: Command ignored! No remote named '${remote}'."
+    continue
+  fi
+
+  git fetch $remote
+  echo "Fetched ${remote}."
+
+done

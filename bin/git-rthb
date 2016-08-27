@@ -1,22 +1,38 @@
 #!/bin/zsh
 
-# Usage: git rthb {base branch} {branch1} {branch2} ...
+if [[ -z $1 ]] then
+  echo 'Usage: git rthb [<base-branch>] [<branch>...]'
+  exit 1
+fi
 
-# Save {base branch}`$1` as `BASE_BRANCH` and Remove it in `$@`
+# Base Branch
+# ======
 BASE_BRANCH=$1
+BASE_BRANCH_REF=`git show-ref refs/heads/${BASE_BRANCH}`
+
+if [[ ! -n $BASE_BRANCH_REF ]] then
+  echo "Fatal: Command ignored! No branch named '${BASE_BRANCH}'."
+  exit 1
+fi
+
+# Target Branch
+# ======
+# Ignore first parameter <base-branch> in `$@`
 shift
 
 for branch in "$@"
 do
-	BRANCH_REF=`git show-ref refs/heads/${branch}`
+  BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-	if [[ ! -n $BRANCH_REF ]] then
-		echo "Fatal: Command ignored! No branch named '${branch}'."
-		continue
-	else
-		git checkout $branch
-		git reset --hard $BASE_BRANCH
-	fi
+  if [[ ! -n $BRANCH_REF ]] then
+    echo "Fatal: Command ignored! No branch named '${branch}'."
+    continue
+  fi
+
+  git checkout $branch
+  git reset --hard $BASE_BRANCH
+  echo "Reset ${branch} based on ${BASE_BRANCH}."
+
 done
 
 git checkout $BASE_BRANCH
