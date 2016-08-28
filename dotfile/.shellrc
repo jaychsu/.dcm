@@ -14,6 +14,7 @@ alias ll='ls -l'
 alias rm='rm -v'
 alias sudo='sudo -E'
 alias vi='vim --noplugin'
+alias less='less -r'
 
 # Navigation
 alias ..='cd ..'
@@ -36,7 +37,6 @@ alias nr='npm run'
 alias gp='gulp'
 alias wp='webpack'
 alias wps='webpack-dev-server'
-alias less='less -r'
 alias sscli='http_proxy on && DEBUG=proxy kneesocks 10001 1080'
 alias cscli='http_proxy off'
 
