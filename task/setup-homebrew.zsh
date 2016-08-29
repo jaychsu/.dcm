@@ -7,5 +7,5 @@ else
 fi
 
 brew doctor
-brew install git tree mongodb redis thefuck
+brew install git tree mongodb redis thefuck postgresql
 brew cleanup

@@ -18,6 +18,7 @@ cd && git clone git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
   - `ruby` and related `gem`, `rails`, `bundler`.
   - `git`
   - `mongodb`
+  - `postgresql`
   - `redis`
 
 By the way, you may need to change the owner info in [`variable.zsh`](./dotfile/.zsh/variable.zsh).
