@@ -14,8 +14,8 @@ cd && git clone git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
 2. Add some powerful alias for [shell](./dotfile/.zsh/alias.zsh) and [git](./dotfile/.gitconfig).
 3. The following will be installed or updated:
   - `node` and related.
-  - `ruby` and related.
   - `brew` and related `tree`, `thefuck`.
+  - `ruby` and related `gem`, `rails`, `bundler`.
   - `git`
   - `mongodb`
   - `redis`
