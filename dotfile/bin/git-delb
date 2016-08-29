@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 if [[ -z $1 ]] then
-  echo 'Usage: git delb [<branch>...]'
+  echo 'Usage: git delb <branch>...'
   exit 1
 fi
 
