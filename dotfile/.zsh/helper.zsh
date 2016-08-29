@@ -22,13 +22,6 @@ run_task() {
   echo "Finished '$TASK_NAME' after $RUNTIME(ms)"
 }
 
-pause() {
-  read -n 1 -p "$*" INP
-  if [[ $INP != '' ]]; then
-    echo -ne '\b \n'
-  fi
-}
-
 http_proxy() {
   if [[ $1 == on ]] then
     echo 'http_proxy turned on'
