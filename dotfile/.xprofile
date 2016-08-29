@@ -1,0 +1,8 @@
+export GTK_IM_MODULE='ibus'
+export QT_IM_MODULE='ibus'
+export XMODIFIERS='@im=ibus'
+
+export GNOME_DESKTOP_SESSION_ID=1
+export DESKTOP_SESSION=gnome
+
+# vim: set ft=sh:

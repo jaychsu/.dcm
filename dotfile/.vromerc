@@ -1,0 +1,8 @@
+map h 4h
+map j 4j
+map k 4k
+map l 4l
+set disablesites=mail.google.com, www.google.com/reader, groups.google.com, docs.google.com, twitter.com, trello.com
+set enable_vrome_key=<C-`>
+set nextpattern+=^NextPage|Next →|››|后页>$
+set previouspattern+=^PrevPage|← Previous|‹‹|<前页$

@@ -1,0 +1,12 @@
+# Sysytem Files
+.DS_Store
+tags
+doc/tags-*
+*.dcu
+
+# Project Files
+doc.local
+
+# Sublime Files
+*.sublime-*
+sftp-config*.json
