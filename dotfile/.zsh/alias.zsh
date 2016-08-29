@@ -32,8 +32,8 @@ alias ~='cd ~ && cd'
 alias g='git'
 alias gb='gitbook'
 alias st='stree'
-alias stpg='postgres -D /usr/local/var/postgres'
-alias qtpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+alias spg='postgres -D /usr/local/var/postgres'
+alias qpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 
 # Node
 alias nd='node'
@@ -41,7 +41,7 @@ alias n='npm'
 alias nr='npm run'
 alias gp='gulp'
 alias wp='webpack'
-alias wps='webpack-dev-server'
+alias ws='webpack-dev-server'
 alias sscli='( trap "http_proxy off" 2; http_proxy on; DEBUG=proxy kneesocks 10001 1080; )'
 
 # Ruby
