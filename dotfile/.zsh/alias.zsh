@@ -21,6 +21,14 @@ alias sudo='sudo -E'
 alias vi='vim --noplugin'
 alias less='less -r'
 
+ce() {
+  if [[ $# == 1 ]] then
+    mkdir $1 && cd $1
+  else
+    echo 'Warn: Only receive one parameter!'
+  fi
+}
+
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -31,7 +39,6 @@ alias ~='cd ~ && cd'
 # HomeBrew
 alias g='git'
 alias gb='gitbook'
-alias st='stree'
 alias spg='postgres -D /usr/local/var/postgres'
 alias qpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 
@@ -51,6 +58,42 @@ alias be='bundle exec'
 alias rgc='rvm gemset create'
 alias rgl='rvm gemset list'
 alias rgu='rvm gemset use'
+
+# Third-party
+alias st='stree'
+
+sl() {
+  SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+  if [[ $# == 1 ]] then
+    SUBLPROJ_DEFAULT_NAME="${1}/_index.sublime-project"
+    if [[ -e $SUBLPROJ_DEFAULT_NAME ]] then
+      eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
+    else
+      eval $SUBLIME $1
+      echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
+    fi
+  elif [[ $# == 0 ]] then
+    eval $SUBLIME .
+  else
+    echo 'Warn: Only receive one parameter!'
+  fi
+}
+
+stdev() {
+  DEV_IDE='sl'
+  GIT_GUI='stree'
+  ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
+
+  # `builtin` is required, since `cd` is not a program
+  if [[ $# == 1 ]] then
+    builtin cd $1 && eval $ACTION
+  elif [[ $# == 0 ]] then
+    eval $ACTION
+  else
+    echo 'Warn: Only receive one parameter!'
+  fi
+}
 
 # Folder Pathes
 hash -d cloud="$HOME/CloudStation"
