@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # Install NVM
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash

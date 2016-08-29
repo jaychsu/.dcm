@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # Third-party required by Rails
 brew doctor

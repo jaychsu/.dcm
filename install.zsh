@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 echo 'Please install [Xcode](http://developer.apple.com/xcode/) first.'
 open http://developer.apple.com/xcode/
@@ -14,5 +14,6 @@ fi
 
 ./task/hardlink-config.zsh
 ./task/setup-homebrew.zsh
+./task/setup-zsh.zsh
 ./task/setup-ruby.zsh
 ./task/setup-node.zsh
