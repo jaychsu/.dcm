@@ -5,7 +5,7 @@ An automated script to build development environment.
 ## Installation
 
 ```
-cd && git clone --recursive git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
+cd && git clone git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
 ```
 
 ## What will happen
