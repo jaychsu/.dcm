@@ -25,7 +25,7 @@ run_task() {
 http_proxy() {
   if [[ $1 == on ]] then
     echo 'http_proxy turned on'
-    # ENV VAR
+    # ENV VAR; Homebrew
     export http_proxy=$PROXY_URL
     export https_proxy=$PROXY_URL
     # Git
