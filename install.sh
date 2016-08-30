@@ -1,5 +1,10 @@
 #!/bin/bash
 
+set -e
+
+{ # this ensures the entire script is downloaded #
+
+
 echo 'Please install [Xcode](http://developer.apple.com/xcode/) first.'
 open http://developer.apple.com/xcode/
 
@@ -29,3 +34,6 @@ cd && git clone git@github.com:jaychsu/.dcm.git && ~/.dcm/install.sh
 ~/.dcm/task/setup-node.zsh
 
 brew cleanup
+
+
+} # this ensures the entire script is downloaded #
