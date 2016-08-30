@@ -5,7 +5,7 @@ Just a backup of my configurations and some automated scripts to build env.
 ## Installation
 
 ```
-cd && git clone git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
+curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install.sh | bash -s stable
 ```
 
 ## What will happen
