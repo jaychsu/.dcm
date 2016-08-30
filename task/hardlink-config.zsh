@@ -1,9 +1,16 @@
-#!/bin/sh
+#!/bin/zsh
 
-# Functions
-# ======
+files=()
+
+RED='\e[0;31m'
+GREEN='\e[0;32m'
+YELLOW='\e[0;33m'
+RESET='\e[0m'
+
 get_files() {
-  find ./dotfile
+  find . \
+    ! '(' -path '*/.git' -prune ')' \
+    ! '(' -path '*/.DS_Store' -prune ')' \
     -type f \
     -print0
 }
@@ -19,22 +26,11 @@ link_file() {
   if [[ $OSTYPE == cygwin ]]; then
     ln "$PWD/$file" "$HOME/$file"
   else
-    ln -s "$PWD/$file" "$HOME/$file"
+    ln -sfn "$PWD/$file" "$HOME/$file"
   fi
-
-  echo "Made link for $file."
 }
 
-# Main flow
-# ======
-files=()
-
-RED='\e[0;31m'
-GREEN='\e[0;32m'
-YELLOW='\e[0;33m'
-RESET='\e[0m'
-
-cd `dirname $0`
+cd ../dotfile
 git submodule update --init
 
 while IFS= read -r -d '' file; do

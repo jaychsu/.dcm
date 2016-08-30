@@ -21,4 +21,4 @@ cd && git clone git@github.com:jaychsu/.dcm.git && .dcm/install.zsh
   - `postgresql`
   - `redis`
 
-By the way, you may need to change the owner info in [`variable.zsh`](./dotfile/.zsh/variable.zsh).
+By the way, you may need to change the owner info in [git](./dotfile/.gitconfig).

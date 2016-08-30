@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Install NVM
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+
+. /usr/local/opt/nvm/nvm.sh
 
 # Install Node
 nvm install stable

@@ -98,4 +98,5 @@ stdev() {
 # Folder Pathes
 hash -d cloud="$HOME/CloudStation"
 hash -d down="$HOME/Downloads"
+hash -d dot="$HOME/.dcm/dotfile"
 hash -d site="$HOME/Sites"
