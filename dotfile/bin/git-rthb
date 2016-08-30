@@ -20,8 +20,7 @@ fi
 # Ignore first parameter <base-branch> in `$@`
 shift
 
-for branch in "$@"
-do
+for branch in "$@"; do
   BRANCH_REF=`git show-ref refs/heads/${branch}`
 
   if [[ ! -n $BRANCH_REF ]] then

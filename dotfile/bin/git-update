@@ -5,8 +5,7 @@ if [[ -z $1 ]] then
   exit 1
 fi
 
-for remote in origin upstream "$@"
-do
+for remote in origin upstream "$@"; do
   REMOTE_REF=`git remote | grep ${remote}`
 
   if [[ ! -n $REMOTE_REF ]] then

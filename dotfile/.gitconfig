@@ -1,125 +1,125 @@
 [core]
-	; autocrlf = input
-	safecrlf = warn
-	excludesfile = /Users/jaychsu/.gitignore
-	pager = less -r
-	ignorecase = false
+  ; autocrlf = input
+  safecrlf = warn
+  excludesfile = /Users/jaychsu/.gitignore
+  pager = less -r
+  ignorecase = false
 [github]
-	user = jaychsu
+  user = jaychsu
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [color]
-	ui = auto
+  ui = auto
 [diff]
-	renames = copies
-	tool = gvimdiff
+  renames = copies
+  tool = gvimdiff
 [difftool]
-	prompt = false
+  prompt = false
 [user]
-	name = Jaych Su
-	email = jaychsu.tw@gmail.com
+  name = Jaych Su
+  email = jaychsu.tw@gmail.com
 [merge]
-	summary = true
-	tool = gvimdiff
+  summary = true
+  tool = gvimdiff
 [push]
-	default = matching
+  default = matching
 [rerere]
-	enabled = true
+  enabled = true
 [alias]
-	a = add
-	aa = add .
-	ap = add -p
-	au = add -u
-	amr = am --resolved
-	b = branch
-	cb = checkout -b
-	co = checkout
-	cp = cherry-pick
-	ci = commit
-	cia = commit --amend
-	cim = commit -m
-	ch = cherry -v
-	d = diff -b
-	dw = diff -b --word-diff=color
-	dc = diff -b --cached
-	dcw = diff -b --cached --word-diff=color
-	ds = diff -b --stat
-	dt = difftool
-	dct = difftool --cached
-	l = log -p
-	lg = log --oneline --decorate --graph
-	lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	mg = merge
-	mgnf = merge --no-ff
-	mgs = merge --squash
-	mgup = merge --no-ff upstream/master
-	mt = mergetool -y
-	pr = pull-request
-	pl = pull --rebase
-	po = push origin
-	pu = push upstream
-	rb = rebase
-	rbi = rebase -i
-	rbc = rebase --continue
-	rba = rebase --abort
-	rmc = rm -r --cached
-	rt = reset
-	rth = reset --hard
-	s = status
-	show = show -b
-	showw = show -b --word-diff=color
-	sm = submodule
-	st = stash
-	stl = stash list
-	stp = stash pop
-	sts = stash show -p
-	stp1 = stash pop stash@{1}
-	stp2 = stash pop stash@{2}
-	stp3 = stash pop stash@{3}
-	stp4 = stash pop stash@{4}
-	stp5 = stash pop stash@{5}
-	sts1 = stash show stash@{1} -p
-	sts2 = stash show stash@{2} -p
-	sts3 = stash show stash@{3} -p
-	sts4 = stash show stash@{4} -p
-	sts5 = stash show stash@{5} -p
-	# summary of what you're going to push
-	ps = log --pretty=oneline origin..master
-	# like "git log", but include the diffs
-	w = whatchanged
-	wc = whatchanged -p
-	edit-modified   = "!f() { git ls-files -m | awk '{print $NF}' | sort -u; }; gvim -p `f`"
-	edit-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; $EDITOR `f`"
-	add-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; git add `f`"
-	today = !git log --since=\"12 hours ago\" --author=\"`git config --get user.name`\" --reverse --pretty=format:%s
-	f = flow feature
-	frb = flow feature rebase
-	fco = flow feature checkout
-	cloner = clone --recursive
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
+  a = add
+  aa = add .
+  ap = add -p
+  au = add -u
+  amr = am --resolved
+  b = branch
+  cb = checkout -b
+  co = checkout
+  cp = cherry-pick
+  ci = commit
+  cia = commit --amend
+  cim = commit -m
+  ch = cherry -v
+  d = diff -b
+  dw = diff -b --word-diff=color
+  dc = diff -b --cached
+  dcw = diff -b --cached --word-diff=color
+  ds = diff -b --stat
+  dt = difftool
+  dct = difftool --cached
+  l = log -p
+  lg = log --oneline --decorate --graph
+  lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  mg = merge
+  mgnf = merge --no-ff
+  mgs = merge --squash
+  mgup = merge --no-ff upstream/master
+  mt = mergetool -y
+  pr = pull-request
+  pl = pull --rebase
+  po = push origin
+  pu = push upstream
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+  rmc = rm -r --cached
+  rt = reset
+  rth = reset --hard
+  s = status
+  show = show -b
+  showw = show -b --word-diff=color
+  sm = submodule
+  st = stash
+  stl = stash list
+  stp = stash pop
+  sts = stash show -p
+  stp1 = stash pop stash@{1}
+  stp2 = stash pop stash@{2}
+  stp3 = stash pop stash@{3}
+  stp4 = stash pop stash@{4}
+  stp5 = stash pop stash@{5}
+  sts1 = stash show stash@{1} -p
+  sts2 = stash show stash@{2} -p
+  sts3 = stash show stash@{3} -p
+  sts4 = stash show stash@{4} -p
+  sts5 = stash show stash@{5} -p
+  # summary of what you're going to push
+  ps = log --pretty=oneline origin..master
+  # like "git log", but include the diffs
+  w = whatchanged
+  wc = whatchanged -p
+  edit-modified   = "!f() { git ls-files -m | awk '{print $NF}' | sort -u; }; gvim -p `f`"
+  edit-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; $EDITOR `f`"
+  add-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; git add `f`"
+  today = !git log --since=\"12 hours ago\" --author=\"`git config --get user.name`\" --reverse --pretty=format:%s
+  f = flow feature
+  frb = flow feature rebase
+  fco = flow feature checkout
+  cloner = clone --recursive
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [git-up "fetch"]
-	all = true
+  all = true

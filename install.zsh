@@ -4,7 +4,7 @@ echo 'Please install [Xcode](http://developer.apple.com/xcode/) first.'
 open http://developer.apple.com/xcode/
 
 # pause
-read -n1 -r -p "Press any key to continue..." key
+read -n1 -r -p "Press any key to continue..."
 
 # Xcode command line tools
 xcode-select --install
