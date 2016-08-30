@@ -16,6 +16,7 @@ fi
 alias grep='grep --color'
 alias la='ls -a'
 alias ll='ls -l'
+alias lal='ls -a -l'
 alias rm='rm -v'
 alias sudo='sudo -E'
 alias vi='vim --noplugin'
