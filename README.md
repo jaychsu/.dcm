@@ -4,9 +4,10 @@ Just a backup of my configurations and some automated scripts to build env.
 
 ## Installation
 
-```
-curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install.sh | bash -s stable
-```
+1. Install [Xcode](http://developer.apple.com/xcode/) first plz.
+2. Run command:
+
+    ```curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install.sh | bash -s stable```
 
 ## What will happen
 

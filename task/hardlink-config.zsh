@@ -31,7 +31,7 @@ link_file() {
 }
 
 # Related by main shell: install.zsh
-cd ./dotfile
+cd $HOME/.dcm/dotfile
 git submodule update --init
 
 while IFS= read -r -d '' file; do
