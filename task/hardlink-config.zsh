@@ -30,7 +30,8 @@ link_file() {
   fi
 }
 
-cd ../dotfile
+# Related by main shell: install.zsh
+cd ./dotfile
 git submodule update --init
 
 while IFS= read -r -d '' file; do

@@ -1,13 +1,13 @@
 #!/bin/zsh
 
 # Install NVM
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+brew install nvm
 
 [[ -s /usr/local/opt/nvm/nvm.sh ]] && . /usr/local/opt/nvm/nvm.sh
 
 # Install Node
 nvm install stable
-nvm use stable
+nvm use --delete-prefix stable
 nvm alias default stable
 
 # Install useful tools
