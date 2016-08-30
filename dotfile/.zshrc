@@ -15,7 +15,7 @@
 . ~/.zsh/autocomplete.zsh
 
 # Sensitive Config
-for file in ~/.zsh/.sensitive/*.zsh(N); do
+for file in ~/.dcm/dotfile/.sensitive/*.zsh(N); do
   . $file
 done
 
