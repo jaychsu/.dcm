@@ -25,7 +25,7 @@ run_task() {
 http_proxy() {
   if [[ $1 == on ]] then
     echo 'http_proxy turned on'
-    # ENV VAR; Homebrew
+    # Homebrew
     export http_proxy=$PROXY_URL
     export https_proxy=$PROXY_URL
     # Git
@@ -43,7 +43,7 @@ http_proxy() {
     export bower_strict_ssl=false
   elif [[ $1 == off ]] then
     echo '\nhttp_proxy turned off'
-    # ENV VAR
+    # Homebrew
     unset http_proxy
     unset https_proxy
     # Git

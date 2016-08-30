@@ -1,6 +1,6 @@
 Development Config Manager(.dcm)
 =====
-An automated script to build development environment.
+Just a backup of my configurations and some automated scripts to build env.
 
 ## Installation
 
