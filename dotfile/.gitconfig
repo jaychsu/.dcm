@@ -5,7 +5,7 @@
   pager = less -r
   ignorecase = false
 [github]
-  user = $GITHUB_ID
+  user = jaychsu
 [branch]
   autosetuprebase = always
 [color]
@@ -16,8 +16,8 @@
 [difftool]
   prompt = false
 [user]
-  name = $OWNER_NAME
-  email = $OWNER_MAIL
+  name = Jaych Su
+  email = jaychsu.tw@gmail.com
 [merge]
   summary = true
   tool = gvimdiff
