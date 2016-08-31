@@ -26,7 +26,7 @@ ce() {
   if [[ $# == 1 ]] then
     mkdir $1 && cd $1
   else
-    echo 'Warn: Only receive one parameter!'
+    echo 'Usage: ce <parent-path>'
   fi
 }
 
@@ -65,19 +65,27 @@ alias st='stree'
 
 sl() {
   SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+  SUBLPROJ_DEFAULT_NAME="$1/_index.sublime-project"
 
   if [[ $# == 1 ]] then
-    SUBLPROJ_DEFAULT_NAME="${1}/_index.sublime-project"
     if [[ -e $SUBLPROJ_DEFAULT_NAME ]] then
       eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
     else
       eval $SUBLIME $1
       echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
     fi
-  elif [[ $# == 0 ]] then
-    eval $SUBLIME .
+  elif [[ $# == 2 ]] then
+    SUBLPROJ_NAME="$1/_$2.sublime-project"
+    if [[ -e $SUBLPROJ_NAME ]] then
+      eval $SUBLIME $SUBLPROJ_NAME
+    elif [[ -e $SUBLPROJ_DEFAULT_NAME ]] then
+      eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
+    else
+      eval $SUBLIME $1
+      echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
+    fi
   else
-    echo 'Warn: Only receive one parameter!'
+    echo 'Usage: sl <project-path> [<project-branch>]'
   fi
 }
 
@@ -89,10 +97,8 @@ stdev() {
   # `builtin` is required, since `cd` is not a program
   if [[ $# == 1 ]] then
     builtin cd $1 && eval $ACTION
-  elif [[ $# == 0 ]] then
-    eval $ACTION
   else
-    echo 'Warn: Only receive one parameter!'
+    echo 'Usage: stdev <project-path>'
   fi
 }
 
