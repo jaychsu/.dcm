@@ -30,9 +30,7 @@ link_file() {
   fi
 }
 
-# Related by main shell: install.zsh
 cd $HOME/.dcm/dotfile
-git submodule update --init
 
 while IFS= read -r -d '' file; do
   # Strip the "./" prefix

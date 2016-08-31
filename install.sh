@@ -23,7 +23,9 @@ brew doctor
 brew install zsh zsh-completions git tree mongodb redis postgresql
 
 # Clone dotfiles
-cd && git clone https://github.com/jaychsu/.dcm.git
+cd
+git clone https://github.com/jaychsu/.dcm.git
+git submodule update --init
 
 # Link dotfiles under $HOME
 cd && ./.dcm/task/hardlink-config.zsh

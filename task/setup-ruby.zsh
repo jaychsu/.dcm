@@ -7,7 +7,7 @@ brew install libxml2 libxslt homebrew/dupes/libiconv libyaml
 
 # Install and Reload RVM
 curl -L https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 # Switch download source to mirror from Ruby China
 echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
