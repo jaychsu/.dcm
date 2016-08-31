@@ -25,4 +25,4 @@ done
 [[ -s /usr/local/opt/nvm/nvm.sh ]] && . /usr/local/opt/nvm/nvm.sh
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
