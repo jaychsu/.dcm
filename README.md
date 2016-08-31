@@ -7,7 +7,11 @@ Just a backup of my configurations and some automated scripts to build env.
 1. Install [Xcode](http://developer.apple.com/xcode/) first plz.
 2. Run command:
 
-    ```curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install.sh | bash -s stable```
+  ```curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install.sh | bash -s stable```
+
+3. Do following manually:
+  - Remove some trivial command added by scripts in [.zshrc](./dotfile/.zshrc).
+  - NVM has some issue about `prefix`, and you can solve it with [here](https://github.com/creationix/nvm/commit/1458de72934a33b279ac3cbb9d648295501ae74d).
 
 ## What will happen
 
