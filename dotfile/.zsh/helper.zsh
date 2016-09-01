@@ -29,9 +29,9 @@ http_proxy() {
     export http_proxy=$PROXY_URL
     export https_proxy=$PROXY_URL
     # Git
-    git config --global http.proxy=$PROXY_URL
-    git config --global https.proxy=$PROXY_URL
-    git config --global http.sslverify=false
+    git config --global http.proxy $PROXY_URL
+    git config --global https.proxy $PROXY_URL
+    git config --global http.sslverify false
     # NPM
     npm config -g set http $PROXY_URL
     npm config -g set https-proxy $PROXY_URL
