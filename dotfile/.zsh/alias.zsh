@@ -51,6 +51,11 @@ alias wp='webpack'
 alias ws='webpack-dev-server'
 alias sscli='( trap "http_proxy off" 2; http_proxy on; DEBUG=proxy kneesocks 10001 1080; )'
 
+alias nc="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
 # Ruby
 # ======
 alias rb='ruby'
