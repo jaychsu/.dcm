@@ -24,13 +24,13 @@ brew install zsh zsh-completions git tree mongodb redis postgresql
 
 # Clone dotfiles
 cd && git clone https://github.com/jaychsu/.dcm.git
-cd ./.dcm
-git remote set-url origin git@github.com:jaychsu/.dcm.git
-git submodule update --init
-
 
 # Link dotfiles under $HOME
 cd && ./.dcm/task/hardlink-config.zsh
+
+cd ./.dcm
+git submodule update --init
+git remote set-url origin git@github.com:jaychsu/.dcm.git
 
 cd && ./.dcm/task/setup-ruby.zsh
 cd && ./.dcm/task/setup-node.zsh
