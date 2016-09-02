@@ -1,1 +1,4 @@
-dotfile/.sensitive/*
+.DS_Store
+tags
+doc/tags-*
+*.dcu
