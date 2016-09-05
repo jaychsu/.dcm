@@ -23,7 +23,7 @@ p.s. you can run and re-run [install.sh](./install.sh) any time if there are any
 3. The following will be installed or updated:
   - `brew` and related `tree`.
   - `ruby` and related `rvm`, `gem`, `rails`, `bundler`.
-  - `node` and related `nvm`, `kneesocks`, `webpack`, `gulp`, `yeoman`.
+  - `node` and related `nvm`, `webpack`, `gulp`, `yeoman`.
   - `python` and related `thefuck`.
   - `git`
   - `mongodb`
