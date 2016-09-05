@@ -123,3 +123,8 @@
   required = true
 [git-up "fetch"]
   all = true
+[http]
+	proxy = http://127.0.0.1:6152
+	sslverify = false
+[https]
+	proxy = http://127.0.0.1:6152
