@@ -115,9 +115,10 @@ stdev() {
 # Folder Pathes
 # ======
 hash -d cloud="$HOME/CloudStation"
+hash -d devset="$HOME/CloudStation/DevSets"
+hash -d dot="$HOME/.dcm/dotfile"
 hash -d down="$HOME/Downloads"
 hash -d home="$HOME/.dcm"
-hash -d dot="$HOME/.dcm/dotfile"
-hash -d site="$HOME/Sites"
-hash -d sen="$HOME/CloudStation/DevSets"
 hash -d proj="$HOME/CloudStation/Projects"
+hash -d site="$HOME/Sites"
+hash -d trash="$HOME/.Trash"
