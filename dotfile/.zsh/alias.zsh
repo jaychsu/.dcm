@@ -19,7 +19,7 @@ else
 fi
 
 ce() {
-  if [[ $# == 1 ]] then
+  if [[ $# == 1 ]]; then
     mkdir $1 && cd $1
   else
     echo 'Usage: ce <parent-path>'
@@ -77,18 +77,18 @@ sl() {
   SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
   SUBLPROJ_DEFAULT_NAME="$1/_index.sublime-project"
 
-  if [[ $# == 1 ]] then
-    if [[ -e $SUBLPROJ_DEFAULT_NAME ]] then
+  if [[ $# == 1 ]]; then
+    if [[ -e $SUBLPROJ_DEFAULT_NAME ]]; then
       eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
     else
       eval $SUBLIME $1
       echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
     fi
-  elif [[ $# == 2 ]] then
+  elif [[ $# == 2 ]]; then
     SUBLPROJ_NAME="$1/_$2.sublime-project"
-    if [[ -e $SUBLPROJ_NAME ]] then
+    if [[ -e $SUBLPROJ_NAME ]]; then
       eval $SUBLIME $SUBLPROJ_NAME
-    elif [[ -e $SUBLPROJ_DEFAULT_NAME ]] then
+    elif [[ -e $SUBLPROJ_DEFAULT_NAME ]]; then
       eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
     else
       eval $SUBLIME $1
@@ -105,7 +105,7 @@ stdev() {
   ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
 
   # `builtin` is required, since `cd` is not a program
-  if [[ $# == 1 ]] then
+  if [[ $# == 1 ]]; then
     builtin cd $1 && eval $ACTION
   else
     echo 'Usage: stdev <project-path>'
