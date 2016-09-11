@@ -4,7 +4,7 @@ for remote in origin upstream "$@"; do
   REMOTE_REF=`git remote | grep ${remote}`
 
   if [[ ! -n $REMOTE_REF ]]; then
-    [[ $remote != 'upstream' ]] && echo "Fatal: Command ignored! No remote named '${remote}'."
+    [[ $remote != 'origin' && $remote != 'upstream' ]] && echo "Fatal: Command ignored! No remote named '${remote}'."
     continue
   fi
 
