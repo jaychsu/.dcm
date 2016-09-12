@@ -66,7 +66,7 @@ alias rgu='rvm gemset use'
 
 # Third-party
 # ======
-alias st='stree'
+alias st='/Applications/SourceTree.app/Contents/Resources/stree'
 
 # nvbn/thefuck: https://github.com/nvbn/thefuck
 if command_exists thefuck; then
