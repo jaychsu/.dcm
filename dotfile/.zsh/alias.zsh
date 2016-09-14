@@ -100,8 +100,10 @@ sl() {
 }
 
 stdev() {
+  # Current Code Editor is Sublime
   DEV_IDE='sl'
-  GIT_GUI='stree'
+  # Current Git GUI is SourceTree
+  GIT_GUI='st'
   ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
 
   # `builtin` is required, since `cd` is not a program
