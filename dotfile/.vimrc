@@ -5,13 +5,17 @@ set nu " Show line number
 set ai " Align indent
 
 " Key Mapping
-inoremap ( ()<Esc>i " Auto-fill bracket `()`
-inoremap [ []<Esc>i " Auto-fill bracket `[]`
+" Auto-fill bracket `()`
+inoremap ( ()<Esc>i
+" Auto-fill bracket `[]`
+inoremap [ []<Esc>i
 inoremap {<CR> {<CR>}<Esc>ko
 inoremap {{ {}<ESC>i
 
-inoremap ` ``<Esc>i " Auto-fill bracket ``
-inoremap ' ''<Esc>i " Auto-fill bracket `''`
+" Auto-fill bracket ``
+inoremap ` ``<Esc>i
+" Auto-fill bracket `''`
+inoremap ' ''<Esc>i
 
 " Indent
 set expandtab
