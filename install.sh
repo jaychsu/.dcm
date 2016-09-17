@@ -21,9 +21,9 @@ fi
 
 brew doctor
 brew install zsh zsh-completions git tree mongodb redis postgresql
+chsh -s /bin/zsh
 
 # Clone dotfiles
-cd
 if [ -d "~/.dcm" ]; then
   cd ~/.dcm
   git pull origin
