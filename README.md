@@ -22,13 +22,8 @@ p.s. you can run and re-run [install.sh](./install.sh) any time if there are any
 1. Install and use `zsh` as shell, and config it with [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
 2. Add some powerful aliases for [shell](./dotfile/.zsh/alias.zsh) and [git](./dotfile/.gitconfig).
 3. The following will be installed or updated:
-  - `brew` and related `tree`.
+  - `homebrew` and related `git`, `mongodb`, `postgresql`, `redis`, `python`, `thefuck`, `tree`.
   - `ruby` and related `rvm`, `gem`, `rails`, `bundler`.
   - `node` and related `nvm`, `webpack`, `gulp`, `yeoman`.
-  - `python` and related `thefuck`.
-  - `git`
-  - `mongodb`
-  - `postgresql`
-  - `redis`
 
 By the way, you may need to change the owner info in [git](./dotfile/.gitconfig).

@@ -20,7 +20,17 @@ else
 fi
 
 brew doctor
-brew install zsh zsh-completions git tree mongodb redis postgresql
+
+# Install zsh
+brew install zsh zsh-completions
+
+# Install useful tools
+brew install git tree mongodb redis postgresql
+
+# Install dependency for `Gutter Color` under `Sublime text3`
+brew install imagemagick
+
+# Set `zsh` as default shell
 chsh -s /bin/zsh
 
 # Clone dotfiles
