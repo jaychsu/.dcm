@@ -3,7 +3,7 @@ Development Config Manager(.dcm)
 
 Just a backup of my configurations and some automated scripts to build env.
 
-**p.s. it's available for OSX only.**
+p.s. it's available for **OSX only.**
 
 ## Installation
 
