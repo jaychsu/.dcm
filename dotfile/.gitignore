@@ -10,3 +10,6 @@ doc.local
 # Sublime Files
 *.sublime-*
 sftp-config*.json
+
+# Visual Code Files
+.vscode
