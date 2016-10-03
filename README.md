@@ -19,6 +19,12 @@ p.s. it's available for **OSX only.**
 
 p.s. you can run and re-run [install.sh](./install.sh) any time if there are any error occurred.
 
+## Installation for Linux
+
+Just run
+
+```curl -L https://raw.githubusercontent.com/jaychsu/.dcm/master/install-linux.sh | bash -s stable```
+
 ## What will happen
 
 1. Install and use `zsh` as shell, and config it with [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
