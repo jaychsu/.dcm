@@ -1,22 +1,18 @@
 #!/bin/bash
 
 set -e
-
 { # this ensures the entire script is downloaded #
 
-
-command_exists() {
-  type "$1" &> /dev/null
-}
 
 # Xcode command line tools
 xcode-select --install || true
 
 # Setup Homebrew
-if command_exists brew; then
-  brew update
-else
+which -s brew
+if [ $? != 0 ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  brew update
 fi
 
 brew doctor
