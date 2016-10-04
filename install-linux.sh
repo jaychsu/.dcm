@@ -4,8 +4,8 @@ set -e
 { # this ensures the entire script is downloaded #
 
 
-apt-get update
-apt-get install zsh yum git
+sudo apt-get update
+sudo apt-get install zsh yum git
 
 chsh -s /bin/zsh
 
@@ -26,7 +26,7 @@ git config submodule."dotfile/.zsh/zsh-syntax-highlighting".url git@github.com:z
 # Link dotfiles under $HOME
 cd && ~/.dcm/task/hardlink-config.zsh
 
-apt-get autoclean
+sudo apt-get autoclean
 
 
 } # this ensures the entire script is downloaded #
