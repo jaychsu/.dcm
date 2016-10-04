@@ -19,7 +19,7 @@ p.s. it's available for **OSX only.**
 
 p.s. you can run and re-run [install.sh](./install.sh) any time if there are any error occurred.
 
-## Installation for Linux
+## Installation for Linux(Experimental)
 
 Just run
 
