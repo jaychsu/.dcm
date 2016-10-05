@@ -2,6 +2,8 @@
 
 CURRENT_BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
+git remote update --prune
+
 for remote in origin upstream "$@"; do
   REMOTE_REF=`git remote | grep ${remote}`
 
@@ -10,10 +12,6 @@ for remote in origin upstream "$@"; do
     [ $remote != 'origin' && $remote != 'upstream' ] && echo "Fatal: Command ignored! No remote named '${remote}'."
     continue
   fi
-
-  # Fetch remote
-  git fetch $remote
-  echo "Fetched ${remote}."
 
   # Update local brach by corresponded one in remote
   if [ $remote == 'origin' ]; then
