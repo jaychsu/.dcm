@@ -8,13 +8,13 @@ for remote in origin upstream "$@"; do
   REMOTE_REF=`git remote | grep ${remote}`
 
   # Break current iteration if remote is missing
-  if [ ! -n $REMOTE_REF ]; then
-    [ $remote != 'origin' && $remote != 'upstream' ] && echo "Fatal: Command ignored! No remote named '${remote}'."
+  if [ ! -n "$REMOTE_REF" ]; then
+    [ "$remote" != 'origin' ] && [ "$remote" != 'upstream' ] && echo "Fatal: Command ignored! No remote named '${remote}'."
     continue
   fi
 
   # Update local brach by corresponded one in remote
-  if [ $remote == 'origin' ]; then
+  if [ "$remote" = 'origin' ]; then
     branches=$(git branch | cut -c 3-)
     for branch in $branches; do
       git checkout $branch

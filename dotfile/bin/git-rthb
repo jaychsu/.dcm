@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z $1 || -z $2 ]; then
+if [ -z "$1" ] || [ -z "$2" ]; then
   echo 'Usage: git rthb <base-branch> <branch>...'
   exit 1
 fi
@@ -10,7 +10,7 @@ fi
 BASE_BRANCH=$1
 BASE_BRANCH_REF=`git show-ref refs/heads/${BASE_BRANCH}`
 
-if [ ! -n $BASE_BRANCH_REF ]; then
+if [ ! -n "$BASE_BRANCH_REF" ]; then
   echo "Fatal: Command ignored! No branch named '${BASE_BRANCH}'."
   exit 1
 fi
@@ -23,7 +23,7 @@ shift
 for branch in "$@"; do
   BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-  if [ ! -n $BRANCH_REF ]; then
+  if [ ! -n "$BRANCH_REF" ]; then
     echo "Fatal: Command ignored! No branch named '${branch}'."
     continue
   fi
