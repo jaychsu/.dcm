@@ -26,12 +26,11 @@ http_proxy() {
   if [ "$1" = on ]; then
 
     if [ -z ${PROXY_URL+x} ]; then
-      echo "'PROXY_URL' is unset. Please set 'PROXY_URL' first."
+      echo "'PROXY_URL' is not found. Please set 'PROXY_URL' first."
     else
-      echo "'PROXY_URL' is set to '${PROXY_URL}'"
+      echo "'PROXY_URL' set to '${PROXY_URL}'"
     fi
 
-    echo 'http_proxy turned on'
     # ENV VAR
     export http_proxy=$PROXY_URL
     export https_proxy=$PROXY_URL
@@ -49,7 +48,7 @@ http_proxy() {
     export bower_https_proxy=$PROXY_URL
     export bower_strict_ssl=false
   elif [ "$1" = off ]; then
-    echo 'http_proxy turned off'
+    echo "'PROXY_URL' is removed."
     # ENV VAR
     unset http_proxy
     unset https_proxy
