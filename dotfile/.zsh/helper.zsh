@@ -6,7 +6,7 @@ command_exists() {
 run_task() {
   if [ -z "$1" ]; then
     echo 'Usage: run_task <task_name> <task_function>'
-    exit 1
+    return 1
   fi
 
   TASK_NAME=$1
