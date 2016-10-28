@@ -4,10 +4,10 @@ set -e
 { # this ensures the entire script is downloaded #
 
 
-sudo apt-get update
-sudo apt-get install zsh yum git
+sudo apt-get -y update
+sudo apt-get -y install zsh git
 
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 
 # Clone dotfiles
 if [ -d "~/.dcm" ]; then
