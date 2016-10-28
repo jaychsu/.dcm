@@ -56,6 +56,10 @@ alias nc="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+alias rn='react-native'
+alias rnios='react-native run-ios'
+alias rnand='react-native run-android'
+
 # Ruby
 # ======
 alias rb='ruby'
@@ -114,15 +118,3 @@ stdev() {
     echo 'Usage: stdev <project-path>'
   fi
 }
-
-# Folder Pathes
-# ======
-hash -d cloud="$HOME/CloudStation"
-hash -d devset="$HOME/CloudStation/DevSets"
-hash -d dot="$HOME/.dcm/dotfile"
-hash -d down="$HOME/Downloads"
-hash -d home="$HOME/.dcm"
-hash -d icloud="$HOME/Library/Mobile Documents"
-hash -d proj="$HOME/CloudStation/Projects"
-hash -d site="$HOME/Sites"
-hash -d trash="$HOME/.Trash"
