@@ -58,8 +58,9 @@ alias nc="npm --registry=https://registry.npm.taobao.org \
 
 alias rn='react-native'
 alias rnios='react-native run-ios'
+alias rnioswith='react-native run-ios --simulator'
 alias rnand='react-native run-android'
-alias rnandpub='cd android && ./gradlew assembleRelease && cd ..'
+alias rnandpub='cd android; ./gradlew assembleRelease; cd ..'
 
 # Ruby
 # ======
