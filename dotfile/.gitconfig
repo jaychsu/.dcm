@@ -58,6 +58,7 @@
   mt = mergetool -y
   pr = pull-request
   pl = pull --rebase
+  pb = push bitbucket
   po = push origin
   pu = push upstream
   rb = rebase
