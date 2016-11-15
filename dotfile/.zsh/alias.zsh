@@ -63,7 +63,7 @@ alias rna='react-native run-android'
 alias rnal='react-native run-android --variant=release'
 alias rnac='cd android; ./gradlew clean; cd ..'
 alias rnap='cd android; ./gradlew assembleRelease; cd ..'
-alias rnai='adb install ./android/app/build/outputs/apk/app-release.apk'
+alias rnai='adb install -r ./android/app/build/outputs/apk/app-release.apk'
 
 # Ruby
 # ======
