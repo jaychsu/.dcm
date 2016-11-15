@@ -62,6 +62,7 @@ alias rnioswith='react-native run-ios --simulator'
 alias rnand='react-native run-android'
 alias rnandlat='react-native run-android --variant=release'
 alias rnandpub='cd android; ./gradlew assembleRelease; cd ..'
+alias rnandins='adb install ./android/app/build/outputs/apk/app-release.apk'
 
 # Ruby
 # ======
