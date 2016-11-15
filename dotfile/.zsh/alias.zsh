@@ -57,12 +57,13 @@ alias nc="npm --registry=https://registry.npm.taobao.org \
   --userconfig=$HOME/.cnpmrc"
 
 alias rn='react-native'
-alias rnios='react-native run-ios'
-alias rnioswith='react-native run-ios --simulator'
-alias rnand='react-native run-android'
-alias rnandlat='react-native run-android --variant=release'
-alias rnandpub='cd android; ./gradlew assembleRelease; cd ..'
-alias rnandins='adb install ./android/app/build/outputs/apk/app-release.apk'
+alias rni='react-native run-ios'
+alias rniwith='react-native run-ios --simulator'
+alias rna='react-native run-android'
+alias rnal='react-native run-android --variant=release'
+alias rnac='cd android; ./gradlew clean; cd ..'
+alias rnap='cd android; ./gradlew assembleRelease; cd ..'
+alias rnai='adb install ./android/app/build/outputs/apk/app-release.apk'
 
 # Ruby
 # ======
