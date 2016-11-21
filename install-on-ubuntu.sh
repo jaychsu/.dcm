@@ -14,9 +14,8 @@ if [ -d "~/.dcm" ]; then
   cd ~/.dcm
   git pull origin
 else
-  rm -rf ~/.dcm
-  git clone https://github.com/jaychsu/.dcm.git
-  cd ~/.dcm
+  echo "'~/.dcm' seems not a valid git repo, please replace it with 'https://github.com/jaychsu/.dcm.git' or remove it."
+  exit 1
 fi
 
 git submodule update --init
