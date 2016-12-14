@@ -38,8 +38,8 @@ alias ~='cd ~ && cd'
 # ======
 alias g='git'
 alias gb='gitbook'
-alias spg='postgres -D /usr/local/var/postgres'
-alias qpg='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+alias spg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias qpg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias svr='python -m SimpleHTTPServer'
 
 # Node
