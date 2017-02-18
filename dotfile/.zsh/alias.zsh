@@ -70,6 +70,7 @@ alias rnag='adb logcat -d'
 # ======
 alias rb='ruby'
 alias r='rails'
+alias b='bundle'
 alias be='bundle exec'
 alias rgc='rvm gemset create'
 alias rgl='rvm gemset list'
