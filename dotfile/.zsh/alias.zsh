@@ -38,8 +38,6 @@ alias ~='cd ~ && cd'
 # ======
 alias g='git'
 alias gb='gitbook'
-alias spg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias qpg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias svr='python -m SimpleHTTPServer'
 
 # Node
