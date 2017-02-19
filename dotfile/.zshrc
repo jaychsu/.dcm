@@ -14,6 +14,11 @@
 . ~/.zsh/history.zsh
 . ~/.zsh/autocomplete.zsh
 
+# Sensitive Config
+for file in ~/.sensitive/*.zsh(N); do
+  . $file
+done
+
 # Third-party Setup
 # ======
 # nvm
@@ -22,7 +27,6 @@
 # rvm
 [[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
-# Sensitive Config
-for file in ~/.sensitive/*.zsh(N); do
-  . $file
-done
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
