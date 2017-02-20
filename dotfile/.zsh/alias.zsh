@@ -79,9 +79,7 @@ alias rgu='rvm gemset use'
 alias st='/Applications/SourceTree.app/Contents/Resources/stree'
 
 # nvbn/thefuck: https://github.com/nvbn/thefuck
-if command_exists thefuck; then
-  eval $(thefuck --alias fuck)
-fi
+if which thefuck > /dev/null; then eval "$(thefuck --alias fuck)"; fi
 
 sl() {
   SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'

@@ -1,8 +1,4 @@
 # helper
-command_exists() {
-  type "$1" &> /dev/null
-}
-
 run_task() {
   if [ -z "$1" ]; then
     echo 'Usage: run_task <task_name> <task_function>'
