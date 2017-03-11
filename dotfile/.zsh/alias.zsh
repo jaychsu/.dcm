@@ -38,7 +38,7 @@ alias ~='cd ~ && cd'
 # ======
 alias g='git'
 alias gb='gitbook'
-alias svr='python -m SimpleHTTPServer'
+alias svr='python3 -m http.server'
 
 # Node
 # ======
