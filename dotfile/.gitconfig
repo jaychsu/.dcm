@@ -17,7 +17,7 @@
   prompt = false
 [user]
   name = Jaych Su
-  email = jaychsu.tw@gmail.com
+  email = hi@jaych.su
 [merge]
   summary = true
   tool = gvimdiff
