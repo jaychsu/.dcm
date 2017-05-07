@@ -19,7 +19,7 @@ for branch in "$@"; do
   fi
 
   git branch -D $branch
-  git push origin :$branch
+  git push origin :heads/$branch
   echo "Removed branch: ${branch}."
 
 done
