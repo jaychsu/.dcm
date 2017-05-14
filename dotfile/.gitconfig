@@ -10,17 +10,9 @@
   autosetuprebase = always
 [color]
   ui = auto
-[diff]
-  renames = copies
-  tool = gvimdiff
-[difftool]
-  prompt = false
 [user]
   name = Jaych Su
   email = hi@jaych.su
-[merge]
-  summary = true
-  tool = gvimdiff
 [push]
   default = matching
 [rerere]
@@ -44,8 +36,6 @@
   dc = diff -b --cached
   dcw = diff -b --cached --word-diff=color
   ds = diff -b --stat
-  dt = difftool
-  dct = difftool --cached
   l = log -p
   lg = log --oneline --decorate --graph
   lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -55,12 +45,12 @@
   mgnf = merge --no-ff
   mgs = merge --squash
   mgup = merge --no-ff upstream/master
-  mt = mergetool -y
   pr = pull-request
   pl = pull --rebase
-  pb = push bitbucket
   po = push origin
   pu = push upstream
+  pg = push github
+  pb = push bitbucket
   rb = rebase
   rbi = rebase -i
   rbc = rebase --continue
@@ -91,28 +81,7 @@
   # like "git log", but include the diffs
   w = whatchanged
   wc = whatchanged -p
-  edit-modified   = "!f() { git ls-files -m | awk '{print $NF}' | sort -u; }; gvim -p `f`"
-  edit-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; $EDITOR `f`"
-  add-unmerged = "!f() { git ls-files -u | awk '{print $NF}' | sort -u; }; git add `f`"
   today = !git log --since=\"12 hours ago\" --author=\"`git config --get user.name`\" --reverse --pretty=format:%s
-  f = flow feature
-  frb = flow feature rebase
-  fco = flow feature checkout
   cloner = clone --recursive
-  switch = !legit switch \"$@\"
-  branches = !legit branches
-  sprout = !legit sprout \"$@\"
-  unpublish = !legit unpublish \"$@\"
-  harvest = !legit harvest \"$@\"
-  sync = !legit sync \"$@\"
-  publish = !legit publish \"$@\"
-  graft = !legit graft \"$@\"
 [credential]
   helper = osxkeychain
-[filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
-[filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true

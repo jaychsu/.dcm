@@ -1,8 +1,0 @@
-set visualbell
-
-autocmd LocationChange .* :set editor=gvim\ -f
-autocmd LocationChange /mail\.google\.com/ :set editor="gvim -f -c 'set ft=mail'"
-
-autocmd LocationChange .* :js modes.passAllKeys = false
-autocmd LocationChange /mail\.google\.com/ :js modes.passAllKeys = true
-autocmd LocationChange /www\.google\.com\/reader\/view/ :js modes.passAllKeys = true

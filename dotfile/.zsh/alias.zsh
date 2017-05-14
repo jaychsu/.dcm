@@ -37,6 +37,7 @@ alias ~='cd ~ && cd'
 # HomeBrew
 # ======
 alias g='git'
+alias g='hub'
 alias gb='gitbook'
 alias svr='python3 -m http.server'
 
