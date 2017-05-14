@@ -4,3 +4,6 @@
 [submodule "dotfile/.vim/vimrc"]
 	path = dotfile/.vim/vimrc
 	url = git@github.com:alanhamlett/dotfiles.git
+[submodule "dotfile/.vim/bundle/Vundle.vim"]
+	path = dotfile/.vim/bundle/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim.git
