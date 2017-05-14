@@ -22,7 +22,12 @@ done
 # Third-party Setup
 # ======
 # nvm
-[[ -s /usr/local/opt/nvm/nvm.sh ]] && . /usr/local/opt/nvm/nvm.sh
+NVM_INSTALL=$(brew --prefix nvm)
+
+if [ -d "$NVM_INSTALL" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  . "$NVM_INSTALL/nvm.sh"
+fi
 
 # rvm
 [[ -s ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
