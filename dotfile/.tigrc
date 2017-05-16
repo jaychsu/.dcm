@@ -1,6 +1,6 @@
-bind generic ^A move-first-line
-bind generic ^E move-last-line
+bind generic <Ctrl-A> move-first-line
+bind generic <Ctrl-E> move-last-line
 
-bind generic ^B !git rebase -i %(commit)~1
+bind generic <Ctrl-B> !git rebase -i %(commit)~1
 
 # vim: set ft=muttrc:

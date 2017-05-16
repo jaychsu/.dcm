@@ -39,7 +39,7 @@ alias ~='cd ~ && cd'
 alias g='git'
 alias g='hub'
 alias gb='gitbook'
-alias svr='python3 -m http.server'
+alias t='tig'
 
 # Node
 # ======
@@ -120,5 +120,14 @@ stdev() {
     builtin cd $1 && eval $ACTION
   else
     echo 'Usage: stdev <project-path>'
+  fi
+}
+
+stsvr() {
+  PY_VER=$(python --version 2>&1 | sed 's/.* \([0-9]\).[0-9].*/\1/')
+  if [ $PY_VER == 2 ]; then
+    python -m SimpleHTTPServer
+  else
+    python -m http.server
   fi
 }
