@@ -18,7 +18,7 @@ fi
 
 ce() {
   if [[ $# == 1 ]]; then
-    mkdir $1 && cd $1
+    mkdir -p $1 && cd $1
   else
     echo 'Usage: ce <parent-path>'
   fi
@@ -89,27 +89,18 @@ if which thefuck > /dev/null; then eval "$(thefuck --alias fuck)"; fi
 
 sl() {
   SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-  SUBLPROJ_DEFAULT_NAME="$1/_index.sublime-project"
+  SUBLPROJ_DEFAULT_PATH="$1/_index.sublime-project"
+  SUBLPROJ_PATH="$1/_$2.sublime-project"
 
-  if [[ $# == 1 ]]; then
-    if [[ -e $SUBLPROJ_DEFAULT_NAME ]]; then
-      eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
-    else
-      eval $SUBLIME $1
-      echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
-    fi
-  elif [[ $# == 2 ]]; then
-    SUBLPROJ_NAME="$1/_$2.sublime-project"
-    if [[ -e $SUBLPROJ_NAME ]]; then
-      eval $SUBLIME $SUBLPROJ_NAME
-    elif [[ -e $SUBLPROJ_DEFAULT_NAME ]]; then
-      eval $SUBLIME $SUBLPROJ_DEFAULT_NAME
-    else
-      eval $SUBLIME $1
-      echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
-    fi
-  else
+  if [[ $1 == '-h' || $1 == '--help' ]]; then
     echo 'Usage: sl <project-path> [<project-branch>]'
+  elif [[ -d $1 && -e $SUBLPROJ_PATH ]]; then
+    eval $SUBLIME $SUBLPROJ_PATH
+  elif [[ -d $1 && -e $SUBLPROJ_DEFAULT_PATH ]]; then
+    eval $SUBLIME $SUBLPROJ_DEFAULT_PATH
+  else
+    eval $SUBLIME .
+    echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
   fi
 }
 
@@ -120,19 +111,23 @@ stdev() {
   GIT_GUI='st'
   ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
 
-  # `builtin` is required, since `cd` is not a program
-  if [[ $# == 1 ]]; then
+  if [[ $1 == '-h' || $1 == '--help' ]]; then
+    echo 'Usage: stdev <project-path>'
+  elif [[ -d $1 ]]; then
+    # `builtin` is required, since `cd` is not a program
     builtin cd $1 && eval $ACTION
   else
-    echo 'Usage: stdev <project-path>'
+    eval $ACTION
   fi
 }
 
 stsvr() {
   PY_VER=$(python --version 2>&1 | sed 's/.* \([0-9]\).[0-9].*/\1/')
-  if [ $PY_VER == 2 ]; then
+  if [[ $PY_VER == 2 ]]; then
     python -m SimpleHTTPServer
-  else
+  elif [[ $PY_VER == 3 ]]; then
     python -m http.server
+  else
+    echo 'Please confirm that the python cli is installed.'
   fi
 }
