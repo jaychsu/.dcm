@@ -34,7 +34,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~ && cd'
 
-# HomeBrew
+# Git
 # ======
 alias g='git'
 alias g='hub'
@@ -46,15 +46,17 @@ alias t='tig'
 alias nd='node'
 alias n='npm'
 alias nr='npm run'
-alias gp='gulp'
-alias wp='webpack'
-alias ws='webpack-dev-server'
-
 alias nc="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+alias gp='gulp'
+alias wp='webpack'
+alias ws='webpack-dev-server'
+
+# React Native
+# ======
 alias rn='react-native'
 alias rni='react-native run-ios'
 alias rniwith='react-native run-ios --simulator'
@@ -65,7 +67,7 @@ alias rnap='cd android; ./gradlew assembleRelease; cd ..'
 alias rnai='adb install -r ./android/app/build/outputs/apk/app-release.apk'
 alias rnag='adb logcat -d'
 
-# Ruby
+# Ruby on Rails
 # ======
 alias rb='ruby'
 alias r='rails'
@@ -74,6 +76,11 @@ alias be='bundle exec'
 alias rgc='rvm gemset create'
 alias rgl='rvm gemset list'
 alias rgu='rvm gemset use'
+
+# Docker
+# ======
+alias d='docker'
+alias dp='docker-compose'
 
 # Third-party
 # ======
