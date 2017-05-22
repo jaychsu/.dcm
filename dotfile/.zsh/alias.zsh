@@ -1,9 +1,7 @@
 # Shell
 # ======
 alias grep='grep --color'
-alias la='ls -a'
-alias ll='ls -l'
-alias lal='ls -a -l'
+alias lal='ls -al'
 alias rm='rm -v'
 alias sudo='sudo -E'
 alias vi='vim --noplugin'
