@@ -11,6 +11,7 @@
 . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Widget
+. ~/.zsh/zsh-wakatime/zsh-wakatime.plugin.zsh
 . ~/.zsh/history.zsh
 . ~/.zsh/autocomplete.zsh
 

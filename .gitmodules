@@ -1,3 +1,6 @@
 [submodule "dotfile/.zsh/zsh-syntax-highlighting"]
   path = dotfile/.zsh/zsh-syntax-highlighting
   url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "dotfile/.zsh/zsh-wakatime"]
+	path = dotfile/.zsh/zsh-wakatime
+	url = git@github.com:wbinglee/zsh-wakatime.git
