@@ -79,6 +79,8 @@ alias rgu='rvm gemset use'
 # ======
 alias d='docker'
 alias dp='docker-compose'
+alias dpu='docker-compose up'
+alias dpup='docker-compose up --remove-orphans'
 
 # Third-party
 # ======
