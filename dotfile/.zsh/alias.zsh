@@ -100,6 +100,8 @@ sl() {
     eval $SUBLIME $SUBLPROJ_PATH
   elif [[ -d $1 && -e $SUBLPROJ_DEFAULT_PATH ]]; then
     eval $SUBLIME $SUBLPROJ_DEFAULT_PATH
+  elif [[ -e $1 ]]; then
+    eval $SUBLIME $1
   else
     eval $SUBLIME .
     echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
