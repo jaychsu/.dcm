@@ -22,8 +22,7 @@ for remote in origin upstream "$@"; do
       echo "Pulled '${remote}/${branch}'."
     done
   fi
-
 done
 
-echo "Checkout to original branch: ${CURRENT_BRANCH}"
+echo "Checkout to original branch: '${CURRENT_BRANCH}'"
 git checkout $CURRENT_BRANCH

@@ -97,14 +97,17 @@ sl() {
   if [[ $1 == '-h' || $1 == '--help' ]]; then
     echo 'Usage: sl <project-path> [<project-branch>]'
   elif [[ -d $1 && -e $SUBLPROJ_PATH ]]; then
+    echo "Info: Open sublime with the profile '${2}'."
     eval $SUBLIME $SUBLPROJ_PATH
   elif [[ -d $1 && -e $SUBLPROJ_DEFAULT_PATH ]]; then
+    echo 'Info: Open sublime with the main profile.'
     eval $SUBLIME $SUBLPROJ_DEFAULT_PATH
-  elif [[ -e $1 ]]; then
+  elif [[ $1 ]]; then
+    echo "Info: Open a file named '${1}'."
     eval $SUBLIME $1
   else
-    eval $SUBLIME .
     echo 'Info: Current dev folder has NOT sublime project, you need to create one.'
+    eval $SUBLIME .
   fi
 }
 
@@ -132,6 +135,6 @@ stsvr() {
   elif [[ $PY_VER == 3 ]]; then
     python -m http.server
   else
-    echo 'Please confirm that the python cli is installed.'
+    echo "Please confirm that the 'python-cli' is installed."
   fi
 }

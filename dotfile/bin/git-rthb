@@ -30,8 +30,7 @@ for branch in "$@"; do
 
   git checkout $branch
   git reset --hard $BASE_BRANCH
-  echo "Reset ${branch} based on ${BASE_BRANCH}."
-
+  echo "Reset '${branch}' based on '${BASE_BRANCH}'."
 done
 
 git checkout $BASE_BRANCH
