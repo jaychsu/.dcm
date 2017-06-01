@@ -1,12 +1,13 @@
 # Shell
 # ======
-alias grep='grep --color'
-alias lal='ls -al'
-alias rm='rm -v'
 alias sudo='sudo -E'
+alias grep='grep --color'
+alias rm='rm -v'
+alias lal='ls -al'
+alias less='less -r'
 alias v='vim'
 alias vi='vim --noplugin'
-alias less='less -r'
+alias vundle='vim +PluginInstall +qall'
 
 if [[ $OSTYPE == darwin* ]]; then
   alias ls='ls -GFh'
