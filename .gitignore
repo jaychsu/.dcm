@@ -1,4 +1,11 @@
+# Sysytem Files
 .DS_Store
 tags
 doc/tags-*
 *.dcu
+
+# vim
+dotfile/.vim/.backups
+dotfile/.vim/.swaps
+dotfile/.vim/.views
+dotfile/.vim/bundle
