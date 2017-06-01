@@ -2,5 +2,8 @@
   path = dotfile/.zsh/zsh-syntax-highlighting
   url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "dotfile/.zsh/zsh-wakatime"]
-	path = dotfile/.zsh/zsh-wakatime
-	url = git@github.com:wbinglee/zsh-wakatime.git
+  path = dotfile/.zsh/zsh-wakatime
+  url = git@github.com:wbinglee/zsh-wakatime.git
+[submodule "dotfile/.vim/bundle/Vundle.vim"]
+  path = dotfile/.vim/bundle/Vundle.vim
+  url = git@github.com:VundleVim/Vundle.vim.git
