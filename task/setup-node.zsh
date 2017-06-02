@@ -17,4 +17,4 @@ nvm alias default stable
 
 # Install useful tools
 npm install -g npm
-npm install -g webpack webpack-dev-server gulp yo generator-webapp
+npm install -g webpack webpack-dev-server gulp yo generator-webapp yarn

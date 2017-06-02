@@ -29,8 +29,9 @@ Just a backup of my configurations and some automated scripts to build env.
     Packager | The involved software
     --- | ---
     **DIRECT** | homebrew, rvm
-    homebrew | zsh, git, mongodb, postgresql, redis, tree, imagemagick, gnupg, gnupg2, libxml2, libxslt, homebrew/dupes/libiconv, libyaml, thefuck, nvm, pyenv, pyenv-virtualenv
-    nvm | node, npm, webpack, webpack-dev-server, gulp, yeoman
+    homebrew | zsh, git, nvm, pyenv, pyenv-virtualenv, mongodb, postgresql, redis, tree, imagemagick, gnupg, gnupg2, libxml2, libxslt, homebrew/dupes/libiconv, libyaml, thefuck
+    nvm | node
+    npm | webpack, webpack-dev-server, gulp, yeoman, yarn
     pyenv | python
     rvm | ruby
     gem | bundler, rails
