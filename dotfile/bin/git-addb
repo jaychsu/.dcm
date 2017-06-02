@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
+if [[ -z "$1" ]]; then
   echo 'Usage: git addb <branch>...'
   exit 1
 fi
@@ -8,7 +8,7 @@ fi
 for branch in "$@"; do
   BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-  if [ -n "$BRANCH_REF" ]; then
+  if [[ -n "$BRANCH_REF" ]]; then
     echo "Fatal: Command ignored! The branch named '${branch}' has already existed."
     continue
   fi

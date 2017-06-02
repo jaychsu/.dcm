@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
+if [[ -z "$1" ]]; then
   echo 'Usage: git delb <branch>...'
   exit 1
 fi
@@ -10,10 +10,10 @@ git checkout master
 for branch in "$@"; do
   BRANCH_REF=`git show-ref refs/heads/${branch}`
 
-  if [ ! -n "$BRANCH_REF" ]; then
+  if [[ -z "$BRANCH_REF" ]]; then
     echo "Fatal: Command ignored! No branch named '${branch}'."
     continue
-  elif [ "$branch" = 'master' ] || [ "$branch" = 'develop' ]; then
+  elif [[ "$branch" == 'master' ]] || [[ "$branch" == 'develop' ]]; then
     echo "Fatal: Command looks bad. Please delete '${branch}' manually."
     continue
   fi
