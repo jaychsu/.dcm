@@ -43,7 +43,7 @@ $if Bash
   set completion-ignore-case on
   set show-all-if-ambiguous on
   # Expand homedir name
-  #set expand-tilde on
+  # set expand-tilde on
   # Append "/" to all dirnames
   set mark-directories on
   set mark-symlinked-directories on
