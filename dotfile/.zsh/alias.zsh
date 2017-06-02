@@ -1,10 +1,11 @@
 # Shell
 # ======
 alias sudo='sudo -E'
-alias grep='grep --color'
-alias rm='rm -v'
-alias lal='ls -al'
 alias less='less -r'
+alias grep='grep --color'
+alias lal='ls -al'
+alias c='clear'
+alias rm='rm -v'
 alias v='vim'
 alias vi='vim --noplugin'
 alias vundle='vim +PluginInstall +qall'
