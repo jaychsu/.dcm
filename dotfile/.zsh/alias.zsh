@@ -94,18 +94,19 @@
 
   sl() {
     SUBLIME='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-    SUBLPROJ_DEFAULT_PATH="$1/_index.sublime-project"
-    SUBLPROJ_PATH="$1/_$2.sublime-project"
 
-    if [[ $1 == '-h' || $1 == '--help' ]]; then
+    if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
       echo 'Usage: sl <project-path> [<project-branch>]'
-    elif [[ -d $1 && -e $SUBLPROJ_PATH ]]; then
+    elif [[ -d $1 && -e "$1/_$2.sublime-project" ]]; then
       echo "Info: Open sublime with the profile '${2}'."
-      eval $SUBLIME $SUBLPROJ_PATH
-    elif [[ -d $1 && -e $SUBLPROJ_DEFAULT_PATH ]]; then
+      eval $SUBLIME "$1/_$2.sublime-project"
+    elif [[ -d $1 && -e "$1/_index.sublime-project" ]]; then
       echo 'Info: Open sublime with the main profile.'
-      eval $SUBLIME $SUBLPROJ_DEFAULT_PATH
-    elif [[ $1 ]]; then
+      eval $SUBLIME "$1/_index.sublime-project"
+    elif [[ -z $1 && -e './_index.sublime-project' ]]; then
+      echo 'Info: Open sublime with the main profile.'
+      eval $SUBLIME './_index.sublime-project'
+    elif [[ -n $1 ]]; then
       echo "Info: Open a file named '${1}'."
       eval $SUBLIME $1
     else
@@ -119,7 +120,7 @@
     GIT_GUI='st' # Current Git GUI is SourceTree
     ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
 
-    if [[ $1 == '-h' || $1 == '--help' ]]; then
+    if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
       echo 'Usage: stdev <project-path>'
     elif [[ -d $1 ]]; then
       builtin cd $1 && eval $ACTION # `builtin` is required, since `cd` is not a program
