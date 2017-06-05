@@ -3,7 +3,7 @@ Development Config Manager(.dcm)
 
 Just a backup of my configurations and some automated scripts to build env.
 
-## Start to build env on macOS ![](https://img.shields.io/badge/status-stable-green.svg?style=flat)
+## Start to build env on macOS <a href="./install.sh"><img src="https://img.shields.io/badge/status-stable-green.svg?style=flat" alt="status:stable"></a>
 
 1. Install [Xcode](http://developer.apple.com/xcode/) first please.
 2. Run command:
@@ -12,7 +12,7 @@ Just a backup of my configurations and some automated scripts to build env.
 
 3. Put sensitive configs in `~/.sensitive`, and then these files are automatically sourced if the extension is `.zsh`. (REF: [.zshrc](./dotfile/.zshrc))
 
-## Start to build env on Ubuntu {14.04,16.04} LTS ![](https://img.shields.io/badge/status-beta-orange.svg?style=flat)
+## Start to build env on Ubuntu {14.04,16.04} LTS <a href="./install-on-ubuntu.sh"><img src="https://img.shields.io/badge/status-beta-orange.svg?style=flat" alt="status:beta"></a>
 
 1. Just runs command:
 
