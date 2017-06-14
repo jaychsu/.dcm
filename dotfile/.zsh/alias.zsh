@@ -101,16 +101,16 @@
 
     if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
       echo 'Usage: sl <project-path> [<project-branch>]'
-    elif [[ -d $1 && -e "$1/_$2.sublime-project" ]]; then
+    elif [[ -d $1 ]] && [[ -e "$1/_$2.sublime-project" ]]; then
       echo "Info: Open sublime with the profile '${2}'."
       eval $SUBLIME "$1/_$2.sublime-project"
-    elif [[ -d $1 && -e "$1/_index.sublime-project" ]]; then
+    elif [[ -d $1 ]] && [[ -e "$1/_index.sublime-project" ]]; then
       echo 'Info: Open sublime with the main profile.'
       eval $SUBLIME "$1/_index.sublime-project"
-    elif [[ -z $1 && -e './_index.sublime-project' ]]; then
+    elif [[ -z $1 ]] && [[ -e './_index.sublime-project' ]]; then
       echo 'Info: Open sublime with the main profile.'
       eval $SUBLIME './_index.sublime-project'
-    elif [[ -n $1 ]]; then
+    elif [[ -n $1 ]] && [[ ! -d $1 ]]; then
       echo "Info: Open a file named '${1}'."
       eval $SUBLIME $1
     else
