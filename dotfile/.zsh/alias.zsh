@@ -3,7 +3,7 @@
   alias sudo='sudo -E'
   alias less='less -r'
   alias grep='grep --color'
-  alias lal='ls -al'
+  alias la='ls -al'
   alias c='clear'
   alias rm='rm -v'
   alias v='vim'
