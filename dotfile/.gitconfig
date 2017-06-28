@@ -24,6 +24,7 @@
   au = add -u
   amr = am --resolved
   b = branch
+  clonr = clone --recursive
   cb = checkout -b
   co = checkout
   cp = cherry-pick
@@ -36,11 +37,16 @@
   dc = diff -b --cached
   dcw = diff -b --cached --word-diff=color
   ds = diff -b --stat
+  log = log --follow
   l = log -p
   lg = log --oneline --decorate --graph
   lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  today = !git log --since=\"12 hours ago\" --author=\"`git config --get user.name`\" --reverse --pretty=format:%s
+  ps = log --pretty=oneline origin..master # summary of what you're going to push
+  w = whatchanged # like "git log", but include the diffs
+  wc = whatchanged -p
   mg = merge
   mgnf = merge --no-ff
   mgs = merge --squash
@@ -76,12 +82,5 @@
   sts3 = stash show stash@{3} -p
   sts4 = stash show stash@{4} -p
   sts5 = stash show stash@{5} -p
-  # summary of what you're going to push
-  ps = log --pretty=oneline origin..master
-  # like "git log", but include the diffs
-  w = whatchanged
-  wc = whatchanged -p
-  today = !git log --since=\"12 hours ago\" --author=\"`git config --get user.name`\" --reverse --pretty=format:%s
-  cloner = clone --recursive
 [credential]
   helper = osxkeychain
