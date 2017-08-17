@@ -65,6 +65,7 @@
   alias rn='react-native'
   alias rni='react-native run-ios'
   alias rniwith='react-native run-ios --simulator'
+  alias rnid='xcrun simctl list devices'
   alias rna='react-native run-android'
   alias rnal='react-native run-android --variant=release'
   alias rnac='cd android; ./gradlew clean; cd ..'
