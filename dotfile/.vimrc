@@ -35,6 +35,7 @@
   call vundle#begin()
   Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle
 
+  Plugin 'editorconfig/editorconfig-vim'
   Plugin 'wakatime/vim-wakatime'
 
   call vundle#end()
