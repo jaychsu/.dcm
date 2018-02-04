@@ -93,6 +93,7 @@
 # Third-party
 
   alias st='/Applications/SourceTree.app/Contents/Resources/stree'
+  alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 
   # nvbn/thefuck: https://github.com/nvbn/thefuck
   if which thefuck > /dev/null; then eval "$(thefuck --alias fuck)"; fi
