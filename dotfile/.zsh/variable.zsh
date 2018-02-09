@@ -6,6 +6,7 @@ $HOME/bin:\
 /usr/local/sbin:\
 /usr/local/opt/gnupg/libexec/gpgbin:\
 $HOME/.rvm/bin:\
-$PYENV_ROOT/bin
+$PYENV_ROOT/bin:\
+$HOME/.local/bin
 
 export EDITOR=vim
