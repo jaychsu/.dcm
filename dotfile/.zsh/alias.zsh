@@ -124,7 +124,7 @@
   stdev() {
     DEV_IDE='sl' # Current Code Editor is Sublime
     GIT_GUI='st' # Current Git GUI is SourceTree
-    ACTION="open . && ${DEV_IDE} . && ${GIT_GUI} ."
+    ACTION="${DEV_IDE} . && ${GIT_GUI} ."
 
     if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
       echo 'Usage: stdev <project-path>'
