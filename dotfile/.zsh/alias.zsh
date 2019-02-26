@@ -92,6 +92,7 @@
 
 # Third-party
 
+  alias sm='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
   alias st='/Applications/SourceTree.app/Contents/Resources/stree'
   alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 
@@ -122,8 +123,8 @@
   }
 
   stdev() {
-    DEV_IDE='sl' # Current Code Editor is Sublime
-    GIT_GUI='st' # Current Git GUI is SourceTree
+    DEV_IDE='sl' # Current Code Editor is Sublime Text
+    GIT_GUI='sm' # Current Git GUI is Sublime Merge
     ACTION="${DEV_IDE} . && ${GIT_GUI} ."
 
     if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
