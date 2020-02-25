@@ -84,3 +84,5 @@
   sts5 = stash show stash@{5} -p
 [credential]
   helper = osxkeychain
+[init]
+	templatedir = ~/.dcm/dotfile/git-hooks

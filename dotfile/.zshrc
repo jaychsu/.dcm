@@ -36,3 +36,8 @@
   # pyenv
   if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
   if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# custom
+  if [ -e ~/.zsh_custom ]; then
+    . ~/.zsh_custom
+  fi

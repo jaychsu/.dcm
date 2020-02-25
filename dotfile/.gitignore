@@ -3,6 +3,7 @@
 tags
 doc/tags-*
 *.dcu
+ubuntu-*.log
 
 # Project Files
 doc.local
@@ -17,3 +18,6 @@ sftp-config*.json
 
 # Pyenv
 .python-version
+
+# Vagrant
+.vagrant
