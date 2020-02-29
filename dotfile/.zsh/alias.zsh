@@ -1,7 +1,6 @@
 # Shell
 
   alias sudo='sudo -E'
-  alias less='less -r'
   alias grep='grep --color'
   alias la='ls -al'
   alias c='clear'
@@ -38,6 +37,20 @@
   alias ....='cd ../../..'
   alias .....='cd ../../../..'
   alias ~='cd ~ && cd'
+
+  hash -d home="$HOME/.dcm"
+  hash -d desk="$HOME/Desktop"
+  hash -d down="$HOME/Downloads"
+  hash -d site="$HOME/Sites"
+  hash -d trash="$HOME/.Trash"
+
+  hash -d cloud="$HOME/CloudStation"
+  hash -d icloud="$HOME/Library/Mobile Documents"
+  hash -d drive="$HOME/Google Drive"
+
+  hash -d devset="$HOME/Google Drive/DevSets"
+  hash -d dot="$HOME/.dcm/dotfile"
+  hash -d proj="$HOME/CloudStation/Projects"
 
 # Git
 
