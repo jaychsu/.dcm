@@ -21,11 +21,11 @@
 
   ce() {
     if [[ -d $1 ]]; then
-      cd $1
+      builtin cd $1
     elif [[ -f $1 ]]; then
       echo "'${1}' has already existed as a file."
     elif [[ ! -e $1 ]] && [[ -n $1 ]]; then
-      mkdir -p $1 && cd $1
+      mkdir -p $1 && builtin cd $1
     else
       echo 'Usage: ce <folder-path>'
     fi

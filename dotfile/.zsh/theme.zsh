@@ -1,7 +1,7 @@
 # get the name of the branch we are on
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX$(parse_git_dirty)"
 }
 
 # Checks if working tree is dirty
@@ -66,9 +66,9 @@ git_prompt_status() {
 autoload colors; colors
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[blue]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%} %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
 
 # 效果超炫的提示符，如需要禁用，注释下面配置
 function precmd {
@@ -167,7 +167,7 @@ function setprompt {
 
   # Finally, the prompt.
   PROMPT_LINE1="$PR_SET_CHARSET$PR_STITLE${(e)PR_TITLEBAR}%{$fg[cyan]%}%n%{$fg[magenta]%}@%{$fg[blue]%}%M %{$fg[green]%}%~ %{$reset_color%}\$(git_prompt_info)"
-  PROMPT_LINE2="%{$fg[red]%}%#%{$reset_color%} "
+  PROMPT_LINE2="%{$fg[red]%}> %{$reset_color%}"
   PROMPT="$PROMPT_LINE1
 $PROMPT_LINE2"
 }
