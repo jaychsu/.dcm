@@ -34,8 +34,6 @@ git remote set-url origin git@github.com:jaychsu/.dcm.git
 git config submodule."dotfile/.zsh/zsh-syntax-highlighting".url git@github.com:zsh-users/zsh-syntax-highlighting.git
 
 cd && $HOME/.dcm/task/hardlink-config.zsh # Link all dotfiles into `$HOME`
-cd && $HOME/.dcm/task/setup-ruby.zsh
-cd && $HOME/.dcm/task/setup-node.zsh
 
 rm -rf $(brew --cache) # Remove all cache in `Homebrew` even the latest versions of formulae.
 
