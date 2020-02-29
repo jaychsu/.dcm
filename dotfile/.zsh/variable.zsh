@@ -1,5 +1,3 @@
-export PYENV_ROOT=$HOME/.pyenv
-
 export PATH=\
 $PATH:\
 $HOME/bin:\
