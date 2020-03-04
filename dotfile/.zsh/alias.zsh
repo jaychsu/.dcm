@@ -18,18 +18,6 @@
     alias open='gnome-open'
   fi
 
-  ce() {
-    if [[ -d $1 ]]; then
-      builtin cd $1
-    elif [[ -f $1 ]]; then
-      echo "'${1}' has already existed as a file."
-    elif [[ ! -e $1 ]] && [[ -n $1 ]]; then
-      mkdir -p $1 && builtin cd $1
-    else
-      echo 'Usage: ce <folder-path>'
-    fi
-  }
-
 # Navigation
 
   alias ..='cd ..'
@@ -52,6 +40,18 @@
   hash -d dot="$HOME/.dcm/dotfile"
   hash -d proj="$HOME/CloudStation/Projects"
 
+  ce() {
+    if [[ -d $1 ]]; then
+      builtin cd $1
+    elif [[ -f $1 ]]; then
+      echo "'${1}' has already existed as a file."
+    elif [[ ! -e $1 ]] && [[ -n $1 ]]; then
+      mkdir -p $1 && builtin cd $1
+    else
+      echo 'Usage: ce <folder-path>'
+    fi
+  }
+
 # Git
 
   alias g='git'
@@ -72,6 +72,15 @@
   alias gp='gulp'
   alias wp='webpack'
   alias ws='webpack-dev-server'
+
+  init_nvm() {
+    local NVM_INSTALL=$(brew --prefix nvm)
+
+    if [ -d "$NVM_INSTALL" ]; then
+      NVM_DIR="$HOME/.nvm"
+      . "$NVM_INSTALL/nvm.sh"
+    fi
+  }
 
 # React Native
 
@@ -160,13 +169,15 @@
     fi
   }
 
+# Helpers
+
   join_by() {
     local IFS="$1"
     shift
     echo "$*"
   }
 
-  kp() {
+  kill_port() {
     ports=$(join_by , $@)
     pids=$(lsof -ti:$ports)
     kill $pids

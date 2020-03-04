@@ -1,4 +1,4 @@
-export PATH=\
+PATH=\
 $PATH:\
 $HOME/bin:\
 /usr/local/sbin:\
@@ -7,4 +7,4 @@ $HOME/.rvm/bin:\
 $PYENV_ROOT/bin:\
 $HOME/.local/bin
 
-export EDITOR=vim
+EDITOR=vim
