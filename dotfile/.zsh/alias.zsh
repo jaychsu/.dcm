@@ -168,17 +168,3 @@
       echo "Please confirm that the 'python-cli' is installed."
     fi
   }
-
-# Helpers
-
-  join_by() {
-    local IFS="$1"
-    shift
-    echo "$*"
-  }
-
-  kill_port() {
-    ports=$(join_by , $@)
-    pids=$(lsof -ti:$ports)
-    kill $pids
-  }
