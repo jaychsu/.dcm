@@ -112,6 +112,52 @@
   alias dpu='docker-compose up'
   alias dpup='docker-compose up --remove-orphans'
 
+# Contest
+
+  cjadd() {
+    if [[ -n $1 ]]; then
+      COUNT="$1"
+    else
+      COUNT='1'
+    fi
+
+    for (( i=1 ; ((i-$COUNT-1)) ; i=(($i+1)) )); do
+      touch q$i{.py,_{in,out,exp}.txt}
+    done
+  }
+
+  cjrun() {
+    if [[ ! -n $1 || $1:t:e != 'py' ]]; then
+      echo 'Please input the python file.'
+      exit(1)
+    fi
+
+    QID=${1%*.py}
+    python3 "$1" < ${QID}_in.txt > ${QID}_out.txt
+  }
+
+  cjcheck() {
+    if [[ -n $1 ]]; then
+      FILES=$1
+    else
+      FILES=($(ls *.py))
+    fi
+
+    for file in $FILES; do
+      cjrun $file
+
+      QID=${file%*.py}
+      OUTPUT_CONTENT=$(cat ${QID}_out.txt)
+      EXPECT_CONTENT=$(cat ${QID}_exp.txt)
+
+      if [[ ! -z $OUTPUT_CONTENT && ! -z $EXPECT_CONTENT && $OUTPUT_CONTENT == $EXPECT_CONTENT ]]; then
+        echo "Test $QID: Pass!"
+      else
+        echo "Test $QID: Fail..."
+      fi
+    done
+  }
+
 # Third-party
 
   alias sm='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
