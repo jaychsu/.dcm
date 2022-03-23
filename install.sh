@@ -15,7 +15,7 @@ fi
 
 brew doctor
 brew install zsh zsh-completions # Install zsh and related dependencies
-brew install git hub tree mongodb redis postgresql # Install useful tools
+brew install git hub tree # Install useful tools
 brew install imagemagick # Install dependency for `Gutter Color` using in `Sublime text3`
 
 chsh -s /bin/zsh # Set `zsh` as default shell
