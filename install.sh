@@ -3,12 +3,14 @@
 set -e
 { # this ensures the entire script is downloaded #
 
-xcode-select --install || true # Xcode command line tools
+# xcode-select --install || true # Xcode command line tools
+echo "Please install Xcode first."
 
 # Setup Homebrew
 which -s brew
 if [[ $? != 0 ]]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Please install Homebrew first."
+  exit 1
 else
   brew update
 fi
