@@ -73,15 +73,6 @@
   alias wp='webpack'
   alias ws='webpack-dev-server'
 
-  init_nvm() {
-    local NVM_INSTALL=$(brew --prefix nvm)
-
-    if [ -d "$NVM_INSTALL" ]; then
-      NVM_DIR="$HOME/.nvm"
-      . "$NVM_INSTALL/nvm.sh"
-    fi
-  }
-
 # React Native
 
   alias rn='react-native'

@@ -13,6 +13,9 @@
   . ~/.zsh/history.zsh
   . ~/.zsh/autocomplete.zsh
 
+  # Service Config
+  . ~/.zsh/node.zsh
+
   # Shared sensitive Config
   for file in ~/.sensitive/*.zsh(N); do
     . $file
